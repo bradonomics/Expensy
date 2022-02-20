@@ -16,12 +16,12 @@
         <th><h3>Date</h3></th>
         <th><h3></h3></th>
       </tr>
-        <% @category.expenses_sort_by_date.each do |expense| %>
+        <% @category.expenses.order(:date).each do |expense| %>
           <tr style="text-align:left;">
             <td><%= expense.description %></td>
             <td>$ <%= expense.amount %></td>
             <td><%= expense.date %></td>
-            <td><a href="expenses/<%= expense.id %>/edit">Edit <span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href="/expenses/<%= expense.id %>/edit">Edit <span class="glyphicon glyphicon-pencil"></span></a></td>
           </tr>
         <% end %>
       </table>

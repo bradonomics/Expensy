@@ -1,4 +1,4 @@
-<h1 style="color: white; margin: 30px 10px;">Hi, <%= current_user.username.capitalize %> your total expenses are $<%= current_user.total_amount %></h1>
+<h1 style="color: white; margin: 30px 10px;">Hi, your total expenses are $<%= total_amount(@expenses) %></h1>
 
 <div class="container" >
   <div class="row">
@@ -17,7 +17,7 @@
         <th><h3>Category</h3></th>
         <th><h3></h3></th>
       </tr>
-        <% current_user.expenses_sort_by_date.each do |expense| %>
+        <% @expenses.order(:date).each do |expense| %>
           <tr style="text-align:left;">
             <td><a href="expenses/<%= expense.id %>"><%= expense.description %></a></td>
             <td>$ <%= expense.amount %></td>

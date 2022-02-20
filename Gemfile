@@ -1,17 +1,22 @@
-# A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-# gem "rails"
+# Framework
 gem 'sinatra'
-gem 'activerecord', :require => 'active_record'
-gem 'sinatra-contrib'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
-gem 'rake'
-gem 'require_all' #=> Helps to load dependencies
-gem 'sqlite3'
+gem 'sinatra-contrib', require: false
+
+# Web Server
 gem 'thin'
+
+# Database
+gem 'sinatra-activerecord', require: 'sinatra/activerecord'
+gem 'sqlite3'
+
+# Tools
+gem 'rake'
 gem 'pry'
-gem 'bcrypt'
-gem "tux"
+
+# Flash Messages
 gem 'rack-flash3'
-gem 'sinatra-flash'
+
+# Magic
+gem 'require_all'
