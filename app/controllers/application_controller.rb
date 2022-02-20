@@ -1,7 +1,10 @@
+require 'sinatra/base'
+require 'sinatra/reloader'
 require 'rack-flash'
 
 class ApplicationController < Sinatra::Base
 
+  register Sinatra::Reloader
   use Rack::Flash
 
   configure do
