@@ -33,6 +33,7 @@
 *.sql
 *.dump
 *.sqlite
+*.sqlite-*
 
 
 ### Linux ###
