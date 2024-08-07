@@ -1,0 +1,7 @@
+- [ ] Change Category to Tag and allow multiple Tags
+- [ ] Add Merchant to Expense Model
+- [ ] Add Notes to Expense Model
+- [ ] Change expenses total on homepage to be this month's expenses
+- [ ] Add Avarage monthly expenses to homepage
+- [ ] Add page to see expenses by tag, month, and month and tag
+- [ ] Change styling to use bootstrap or something not stupid
